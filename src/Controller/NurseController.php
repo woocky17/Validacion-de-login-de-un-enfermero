@@ -17,4 +17,3 @@ class NurseController extends AbstractController
         ]);
     }
 }
-// 1
