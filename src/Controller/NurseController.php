@@ -17,7 +17,7 @@ class NurseController extends AbstractController
         $password = $request->request->get('password');
 
         if (is_null($gmail) || is_null($password)) {
-            return $this->json(['error' => 'Missing parameters'], Response::HTTP_BAD_REQUEST);
+            return $this->json(['Missing parameters'], Response::HTTP_BAD_REQUEST);
         }
 
         $data = [
@@ -43,7 +43,7 @@ class NurseController extends AbstractController
                 return $this->json(true) ;
             }
         }
-        return $this->json(false);
+        return new JsonResponse(false);
         
     }
 }
